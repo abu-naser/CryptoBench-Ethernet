@@ -13,9 +13,7 @@
 /* Added by Abu Naser */
 #include <openssl/rsa.h>
 #include <openssl/pem.h>
-void MPI_SEC_Initial_Key_Aggrement();
-unsigned char symmetric_key[300];
-int symmetric_key_size = 16;
+
 /* End of add */
 /*
 === BEGIN_MPI_T_CVAR_INFO_BLOCK ===
@@ -203,12 +201,7 @@ int MPI_Init( int *argc, char ***argv )
     /* ... end of body of routine ... */
     MPID_MPI_INIT_FUNC_EXIT(MPID_STATE_MPI_INIT);
     
-    /* Added by Abu Naser(an16e@my.fsu.edu) */
-    printf("ENABLE_SECURE_MPI =%d\n",ENABLE_SECURE_MPI);
- #if ENABLE_SECURE_MPI   
-   // MPI_SEC_Initial_Key_Aggrement();
-#endif
-   /* End of add */
+   
     
     return mpi_errno;
 
@@ -226,157 +219,4 @@ int MPI_Init( int *argc, char ***argv )
     /* --END ERROR HANDLING-- */
 }
 
-    /* Added by Abu Naser(an16e@my.fsu.edu) */
-    
-#if ENABLE_SECURE_MPI   
-void MPI_SEC_Initial_Key_Aggrement(){
-    printf("key size from macro = %d\n",SYMMETRIC_KEY_SIZE);
-    int wrank, wsize;
-    int mpi_errno = MPI_SUCCESS;   
-    MPI_Comm_rank(MPI_COMM_WORLD, &wrank);
-    MPI_Comm_size(MPI_COMM_WORLD, &wsize);
-
-   
-    int keylen, i, ret;
-    unsigned char  *root_public_key, *public_key, *all_process_public_key;
-    unsigned char  *encrypted_text;
-    unsigned char recv_buf[3000];
-    int encrypted_len, decrypted_len, pub_key_size, next;
-    MPI_Status status;
-    BIGNUM *bn;
-    BIGNUM *bnPublic = BN_new();
-    BIGNUM *exponent = BN_new();
-    BIGNUM *bnPrivate = BN_new();
  
-
-    bn = BN_new();
-    BN_set_word(bn, RSA_F4);
-
-    RSA *rsaKey, *temprsa;
-    rsaKey = RSA_new();
-    temprsa = RSA_new();
-
-    /* Generate rsa keypair */
-    RSA_generate_key_ex(rsaKey,  2048, bn,  NULL);
-
-    /* Get the public key and exponent */
-    RSA_get0_key(rsaKey, &bnPublic, &exponent, &bnPrivate);
-
-   
-    all_process_public_key = (unsigned char *)MPIU_Malloc(wsize*256+10);
-    encrypted_text = (unsigned char *)MPIU_Malloc(wsize*256+10);
-
-    pub_key_size = BN_num_bytes(bnPublic);
-    public_key = (unsigned char *) malloc(256+10);
-    ret = BN_bn2bin(bnPublic, public_key);
-
-    /* send the public key to root process */ 
-    mpi_errno = MPI_Gather(public_key, 256, MPI_UNSIGNED_CHAR,
-               all_process_public_key, 256, MPI_UNSIGNED_CHAR,
-               0, MPI_COMM_WORLD);
-
-    
-    if( wrank ==0 ){  
-         BIGNUM *bnOthPubkey = BN_new();
-        /* Generate a random key */
-        RAND_bytes(symmetric_key, symmetric_key_size);
-        //for(i=0;i<symmetric_key_size;i++)
-        //    symmetric_key[i] = 'a'+i;
-        symmetric_key[symmetric_key_size] = '\0';
-        //printf("[%d]: symetric key is = %s\n",wrank, symmetric_key);fflush(stdout);
-
-        int next;
-        /* Encrypt random key with the public key of other process */
-          for(i=1; i<wsize; i++){  
-            next = (i*256);
-            //printf("[%d,1] for %d next %d\n",wrank, i, next); fflush(stdout); 
-            bnOthPubkey = BN_bin2bn((all_process_public_key+next), 256, NULL );
-          
-            temprsa = NULL;
-            temprsa = RSA_new();
-            if(RSA_set0_key(temprsa, bnOthPubkey, exponent, NULL)){  
-                next = i* 256;
-               // printf("[%d] for %d next %d\n",wrank, i, next); fflush(stdout);  
-                ret = RSA_public_encrypt(16, (unsigned char*)symmetric_key, (unsigned char*)(encrypted_text+next), 
-                                        temprsa, RSA_PKCS1_OAEP_PADDING); 
-
-                if(ret!=-1){
-                    printf("[%d] encrypted %d bytes for %d\n",wrank, ret, i); fflush(stdout);
-                }
-                else{
-                     printf("[%d] encryption failed for for %d\n",wrank,  i); fflush(stdout);   
-                }                         
-            }
-            else{
-                printf("RSA_set0_key: Failed in %d for %d\n",wrank, i); fflush(stdout);
-            }
-
-
-        }
-        
-    }
-   
-    /* send/recv encrypted symmetric key from/to processes */
-    mpi_errno = MPI_Scatter(encrypted_text, 256, MPI_UNSIGNED_CHAR, recv_buf, 256, 
-                                    MPI_UNSIGNED_CHAR, 0, MPI_COMM_WORLD);
-
-     if( wrank != 0 ){
-       //  pub_key_size = BN_num_bytes(bnPublic);
-       //  root_public_key = (unsigned char *) MPIU_Malloc(pub_key_size+10);
-
-         /* Receive the public key of the root process */
-        // mpi_errno = MPI_Bcast( root_public_key, pub_key_size, MPI_CHAR, 0, 
-        //       MPI_COMM_WORLD );
-
-        /* Debug: check root publickey */    
-       /* BIGNUM *bnRootPubkey = NULL;  
-        bnRootPubkey = BN_bin2bn(root_public_key, pub_key_size, NULL );
-        printf("[%d]bnRootPubkey:\n",wrank);
-        BN_print_fp(stdout, bnRootPubkey);
-        printf("\n----------------------------------\n");*/
-
-        /* send own public key to root */
-        
-
-        /* Now decrypt the key */
-         ret = RSA_private_decrypt(256, (unsigned char*)recv_buf, (unsigned char*)symmetric_key,
-                       rsaKey, RSA_PKCS1_OAEP_PADDING);
-
-        if(ret!=-1){
-            printf("[%d] decrypted size is %d\n",wrank, ret); 
-            symmetric_key[16] = '\0';
-            printf("[%d] symmetric key is: %s\n",wrank, symmetric_key);
-            fflush(stdout);
-        } 
-        else{
-                printf("RSA_private_decrypt: Failed in %d\n",wrank);
-                // RSA_get0_key(rsaKey, &bnPublic, &exponent, &bnPrivate);
-               /* if(wrank == 2){
-                    printf("[%d]bnPrivate:\n",wrank);
-                    BN_print_fp(stdout, bnPrivate);
-                    printf("\n----------------------------------\n");
-                    fflush(stdout);
-                }*/
-                fflush(stdout);
-            }              
-        /*if(!RSA_private_decrypt(pub_key_size, (unsigned char*)recv_buf, symmetric_key,
-                       rsaKey, RSA_PKCS1_OAEP_PADDING))
-            {
-                printf("RSA_private_decrypt: Failed in %d\n",wrank);fflush(stdout);
-            }
-            else{
-                symmetric_key[16] = '\0';
-                printf("[%d] symmetric key is: %s\n",wrank, symmetric_key);
-                fflush(stdout);
-            }  */                              
-
-    }
-  
-    MPI_Barrier(MPI_COMM_WORLD);
-    MPIU_Free(root_public_key);
-    MPIU_Free(encrypted_text);
-    MPIU_Free(all_process_public_key);
-    return;
-}
-#endif
-/* End of add */
