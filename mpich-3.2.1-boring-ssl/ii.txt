@@ -1,0 +1,122 @@
+make  install-recursive
+make[1]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl'
+Making install in /home/mpiuser/mpich-3.2.1-boring-ssl/src/mpl
+make[2]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/mpl'
+make[3]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/mpl'
+make[3]: Nothing to be done for 'install-exec-am'.
+make[3]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/mpl'
+make[2]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/mpl'
+Making install in /home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa
+make[2]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa'
+Making install in src
+make[3]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa/src'
+make[4]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa/src'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/include'
+ /bin/mkdir -p '/home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/include'
+ /bin/mkdir -p '/home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/include'
+ /usr/bin/install -c -m 644 opa_primitives.h opa_queue.h opa_util.h '/home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/include'
+ /usr/bin/install -c -m 644 opa_config.h '/home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/include'
+ /bin/mkdir -p '/home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/include/primitives'
+ /usr/bin/install -c -m 644  primitives/opa_by_lock.h primitives/opa_emulated.h primitives/opa_gcc_ia64.h primitives/opa_gcc_intel_32_64.h primitives/opa_gcc_intel_32_64_barrier.h primitives/opa_gcc_intel_32_64_ops.h primitives/opa_gcc_intel_32_64_p3.h primitives/opa_gcc_intel_32_64_p3barrier.h primitives/opa_gcc_intrinsics.h primitives/opa_gcc_ppc.h primitives/opa_gcc_sicortex.h primitives/opa_nt_intrinsics.h primitives/opa_sun_atomic_ops.h primitives/opa_unsafe.h '/home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/include/primitives'
+make[4]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa/src'
+make[3]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa/src'
+Making install in test
+make[3]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa/test'
+make[4]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa/test'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Nothing to be done for 'install-data-am'.
+make[4]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa/test'
+make[3]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa/test'
+make[3]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa'
+make[4]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa'
+make[4]: Nothing to be done for 'install-exec-am'.
+ /bin/mkdir -p '/home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/lib/pkgconfig'
+ /usr/bin/install -c -m 644 openpa.pc '/home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/lib/pkgconfig'
+make[4]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa'
+make[3]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa'
+make[2]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa'
+Making install in src/mpi/romio
+make[2]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/mpi/romio'
+make[3]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/mpi/romio'
+make[4]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/mpi/romio'
+ mkdir -p '/home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/include'
+ /usr/bin/install -c -m 644 include/mpio.h include/mpiof.h '/home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/include'
+make[4]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/mpi/romio'
+make[3]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/mpi/romio'
+make[2]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/mpi/romio'
+Making install in src/pm/hydra
+make[2]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra'
+Making install in mpl
+make[3]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/mpl'
+make[4]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/mpl'
+make[4]: Nothing to be done for 'install-exec-am'.
+make[4]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/mpl'
+make[3]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/mpl'
+Making install in tools/topo/hwloc/hwloc
+make[3]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc'
+Making install in src
+make[4]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc/src'
+make[5]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc/src'
+make  install-exec-hook
+make[6]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc/src'
+make[6]: Nothing to be done for 'install-exec-hook'.
+make[6]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc/src'
+make[5]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc/src'
+make[4]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc/src'
+Making install in include
+make[4]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc/include'
+make[5]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc/include'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc/include'
+make[4]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc/include'
+make[4]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc'
+make[5]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc'
+make[5]: Nothing to be done for 'install-exec-am'.
+make[5]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc'
+make[4]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc'
+make[3]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc'
+Making install in .
+make[3]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra'
+make[4]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra'
+make[4]: Nothing to be done for 'install-data-am'.
+ mkdir -p '/home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/bin'
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c hydra_persist '/home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/bin/./MPICH3.2.1_boringssl_hydra_persist'
+libtool: install: /usr/bin/install -c hydra_persist /home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/bin/./MPICH3.2.1_boringssl_hydra_persist
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c hydra_nameserver '/home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/bin/./MPICH3.2.1_boringssl_hydra_nameserver'
+libtool: install: /usr/bin/install -c hydra_nameserver /home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/bin/./MPICH3.2.1_boringssl_hydra_nameserver
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c hydra_pmi_proxy '/home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/bin/./MPICH3.2.1_boringssl_hydra_pmi_proxy'
+libtool: install: /usr/bin/install -c hydra_pmi_proxy /home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/bin/./MPICH3.2.1_boringssl_hydra_pmi_proxy
+  /bin/bash ./libtool   --mode=install /usr/bin/install -c mpiexec.hydra '/home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/bin/./MPICH3.2.1_boringssl_mpiexec.hydra'
+libtool: install: /usr/bin/install -c mpiexec.hydra /home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/bin/./MPICH3.2.1_boringssl_mpiexec.hydra
+make  install-exec-hook
+make[5]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra'
+if [ -x /home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/bin/MPICH3.2.1_boringssl_mpiexec.hydra ] ; then \
+    cd /home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/bin && ln -f -s MPICH3.2.1_boringssl_mpiexec.hydra MPICH3.2.1_boringssl_mpiexec ; \
+    cd /home/mpiuser/mpich-3.2.1-boring-ssl/mpich-3.2.1_install_boringssl/bin && ln -f -s MPICH3.2.1_boringssl_mpiexec.hydra MPICH3.2.1_boringssl_mpirun ; \
+fi
+make[5]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra'
+make[4]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra'
+make[3]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra'
+make[2]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra'
+Making install in .
+make[2]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl'
+  CC       src/mpi/attr/lib_libmpi_la-attr_delete.lo
+  CC       src/mpi/attr/lib_libmpi_la-attr_get.lo
+  CC       src/mpi/attr/lib_libmpi_la-attr_put.lo
+  CC       src/mpi/attr/lib_libmpi_la-comm_create_keyval.lo
+  CC       src/mpi/attr/lib_libmpi_la-comm_free_keyval.lo
+  CC       src/mpi/attr/lib_libmpi_la-comm_delete_attr.lo
+  MOD      src/binding/fortran/use_mpi/mpi.mod-stamp
+  CC       src/mpi/attr/lib_libmpi_la-comm_get_attr.lo
+Makefile:25816: recipe for target 'src/mpi/attr/lib_libmpi_la-attr_delete.lo' failed
+Makefile:25823: recipe for target 'src/mpi/attr/lib_libmpi_la-attr_get.lo' failed
+Makefile:25844: recipe for target 'src/mpi/attr/lib_libmpi_la-comm_delete_attr.lo' failed
+Makefile:25851: recipe for target 'src/mpi/attr/lib_libmpi_la-comm_free_keyval.lo' failed
+Makefile:25837: recipe for target 'src/mpi/attr/lib_libmpi_la-comm_create_keyval.lo' failed
+Makefile:25830: recipe for target 'src/mpi/attr/lib_libmpi_la-attr_put.lo' failed
+Makefile:25858: recipe for target 'src/mpi/attr/lib_libmpi_la-comm_get_attr.lo' failed
+make[2]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl'
+Makefile:38608: recipe for target 'install-recursive' failed
+make[1]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl'
+Makefile:38908: recipe for target 'install' failed

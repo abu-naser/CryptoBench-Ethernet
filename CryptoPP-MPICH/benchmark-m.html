@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+<HTML lang="en">
+<HEAD>
+<META charset="UTF-8">
+<TITLE>Speed Comparison of Popular Crypto Algorithms</TITLE>
+<STYLE>
+  table {border-collapse: collapse;}
+  table, th, td, tr {border: 1px solid black;}
+</STYLE>
+</HEAD>
+<BODY>
+<H1><A href="http://www.cryptopp.com">Crypto++</A> 7.0.0 Benchmarks</H1>
+<P>Here are speed benchmarks for some commonly used cryptographic algorithms.</P>
+<P>CPU frequency of the test platform was not provided.</P>
+
+<BR>
+<TABLE>
+<COLGROUP><COL style="text-align: left;"><COL style="text-align: right;"><COL style="text-align: right;">
+<THEAD style="background: #F0F0F0">
+<TR><TH>Algorithm<TH>MiB/Second
+<TBODY style="background: white;">
+<TR><TD>NonblockingRng<TD>21
+<TR><TD>AutoSeededRandomPool<TD>334
+<TR><TD>AutoSeededX917RNG(AES)<TD>33
+<TR><TD>MT19937<TD>835
+<TR><TD>AES/OFB RNG<TD>560
+<TR><TD>Hash_DRBG(SHA1)<TD>90
+<TR><TD>Hash_DRBG(SHA256)<TD>70
+<TR><TD>HMAC_DRBG(SHA1)<TD>23
+<TR><TD>HMAC_DRBG(SHA256)<TD>18
+<TBODY style="background: yellow;">
+<TR><TD>CRC32<TD>455
+<TR><TD>CRC32C<TD>4514
+<TR><TD>Adler32<TD>1397
+<TR><TD>MD5<TD>591
+<TR><TD>SHA-1<TD>391
+<TR><TD>SHA-256<TD>194
+<TR><TD>SHA-512<TD>256
+<TR><TD>SHA3-224<TD>220
+<TR><TD>SHA3-256<TD>211
+<TR><TD>SHA3-384<TD>160
+<TR><TD>SHA3-512<TD>111
+<TR><TD>Keccak-224<TD>222
+<TR><TD>Keccak-256<TD>207
+<TR><TD>Keccak-384<TD>160
+<TR><TD>Keccak-512<TD>112
+<TR><TD>Tiger<TD>457
+<TR><TD>Whirlpool<TD>140
+<TR><TD>RIPEMD-160<TD>194
+<TR><TD>RIPEMD-320<TD>200
+<TR><TD>RIPEMD-128<TD>348
+<TR><TD>RIPEMD-256<TD>386
+<TR><TD>SM3<TD>179
+<TR><TD>BLAKE2s<TD>553
+<TR><TD>BLAKE2b<TD>708
+</TABLE>
+
+<BR>
+<TABLE>
+<COLGROUP><COL style="text-align: left;"><COL style="text-align: right;"><COL style="text-align: right;"><COL style="text-align: right;"><COL style="text-align: right;">
+<THEAD style="background: #F0F0F0">
+<TR><TH>Algorithm<TH>MiB/Second<TH>Microseconds to<BR>Setup Key and IV
+<TBODY style="background: white;">
+<TR><TD>GMAC(AES)<TD>1536<TD>0.481
+<TR><TD>VMAC(AES)-64 (128-bit key)<TD>8189<TD>0.626
+<TR><TD>VMAC(AES)-128 (128-bit key)<TD>4736<TD>0.729
+<TR><TD>HMAC(SHA-1) (128-bit key)<TD>376<TD>0.249
+<TR><TD>HMAC(SHA-256) (128-bit key)<TD>194<TD>0.244
+<TR><TD>Two-Track-MAC (160-bit key)<TD>227<TD>0.011
+<TR><TD>CMAC(AES) (128-bit key)<TD>622<TD>0.141
+<TR><TD>DMAC(AES) (128-bit key)<TD>616<TD>0.522
+<TR><TD>Poly1305(AES) (256-bit key)<TD>872<TD>0.192
+<TR><TD>BLAKE2s (256-bit key)<TD>555<TD>0.216
+<TR><TD>BLAKE2b (512-bit key)<TD>701<TD>0.247
+<TR><TD>SipHash-2-4 (128-bit key)<TD>788<TD>0.009
+<TR><TD>SipHash-4-8 (128-bit key)<TD>423<TD>0.010
+<TBODY style="background: yellow;">
+<TR><TD>Panama-LE (256-bit key)<TD>1547<TD>0.755
+<TR><TD>Panama-BE (256-bit key)<TD>914<TD>1.093
+<TR><TD>Salsa20 (256-bit key)<TD>841<TD>0.144
+<TR><TD>Salsa20/12<TD>1323<TD>0.188
+<TR><TD>Salsa20/8<TD>1871<TD>0.188
+<TR><TD>ChaCha20 (256-bit key)<TD>330<TD>0.102
+<TR><TD>ChaCha12 (256-bit key)<TD>536<TD>0.103
+<TR><TD>ChaCha8 (256-bit key)<TD>800<TD>0.104
+<TR><TD>Sosemanuk (128-bit key)<TD>1320<TD>0.454
+<TR><TD>MARC4 (128-bit key)<TD>408<TD>1.295
+<TR><TD>SEAL-3.0-LE (160-bit key)<TD>677<TD>27.182
+<TR><TD>WAKE-OFB-LE (256-bit key)<TD>346<TD>1.632
+<TBODY style="background: white;">
+<TR><TD>AES/CTR (128-bit key)<TD>2490<TD>0.243
+<TR><TD>AES/CTR (192-bit key)<TD>2105<TD>0.237
+<TR><TD>AES/CTR (256-bit key)<TD>1817<TD>0.254
+<TR><TD>AES/CBC (128-bit key)<TD>618<TD>0.189
+<TR><TD>AES/CBC (192-bit key)<TD>520<TD>0.183
+<TR><TD>AES/CBC (256-bit key)<TD>453<TD>0.201
+<TR><TD>AES/OFB (128-bit key)<TD>587<TD>0.244
+<TR><TD>AES/CFB (128-bit key)<TD>610<TD>0.264
+<TR><TD>AES/ECB (128-bit key)<TD>3057<TD>0.082
+<TR><TD>ARIA/CTR (128-bit key)<TD>106<TD>0.253
+<TR><TD>ARIA/CTR (256-bit key)<TD>82<TD>0.288
+<TR><TD>Camellia/CTR (128-bit key)<TD>117<TD>0.253
+<TR><TD>Camellia/CTR (256-bit key)<TD>93<TD>0.307
+<TR><TD>Twofish/CTR (128-bit key)<TD>155<TD>2.313
+<TR><TD>Threefish-256(256)/CTR (256-bit key)<TD>310<TD>0.225
+<TR><TD>Threefish-512(512)/CTR (512-bit key)<TD>348<TD>0.231
+<TR><TD>Threefish-1024(1024)/CTR (1024-bit key)<TD>267<TD>0.234
+<TR><TD>Serpent/CTR (128-bit key)<TD>76<TD>0.459
+<TR><TD>CAST-128/CTR (128-bit key)<TD>99<TD>0.304
+<TR><TD>CAST-256/CTR (128-bit key)<TD>95<TD>1.067
+<TR><TD>RC6/CTR (128-bit key)<TD>123<TD>1.917
+<TR><TD>MARS/CTR (128-bit key)<TD>102<TD>0.938
+<TR><TD>SHACAL-2/CTR (128-bit key)<TD>124<TD>0.337
+<TR><TD>SHACAL-2/CTR (512-bit key)<TD>106<TD>0.311
+<TR><TD>DES/CTR (64-bit key)<TD>65<TD>2.480
+<TR><TD>DES-XEX3/CTR (192-bit key)<TD>61<TD>2.526
+<TR><TD>DES-EDE3/CTR (192-bit key)<TD>26<TD>8.071
+<TR><TD>IDEA/CTR (128-bit key)<TD>79<TD>0.263
+<TR><TD>RC5 (r=16)<TD>107<TD>1.534
+<TR><TD>Blowfish/CTR (128-bit key)<TD>113<TD>33.973
+<TR><TD>TEA/CTR (128-bit key)<TD>63<TD>0.208
+<TR><TD>XTEA/CTR (128-bit key)<TD>60<TD>0.208
+<TR><TD>SKIPJACK/CTR (80-bit key)<TD>39<TD>1.614
+<TR><TD>SEED/CTR (1/2 K table)<TD>56<TD>0.285
+<TR><TD>SM4/CTR (128-bit key)<TD>73<TD>0.394
+<TR><TD>Kalyna-128(128)/CTR (128-bit key)<TD>152<TD>0.300
+<TR><TD>Kalyna-128(256)/CTR (256-bit key)<TD>122<TD>0.335
+<TR><TD>Kalyna-256(256)/CTR (256-bit key)<TD>150<TD>0.501
+<TR><TD>Kalyna-256(512)/CTR (512-bit key)<TD>118<TD>0.567
+<TR><TD>Kalyna-512(512)/CTR (512-bit key)<TD>132<TD>0.901
+<TR><TD>SIMON-64(96)/CTR (96-bit key)<TD>390<TD>0.236
+<TR><TD>SIMON-64(128)/CTR (128-bit key)<TD>377<TD>0.254
+<TR><TD>SIMON-128(128)/CTR (128-bit key)<TD>278<TD>0.275
+<TR><TD>SIMON-128(192)/CTR (192-bit key)<TD>245<TD>0.312
+<TR><TD>SIMON-128(256)/CTR (256-bit key)<TD>263<TD>0.305
+<TR><TD>SPECK-64(96)/CTR (96-bit key)<TD>1076<TD>0.194
+<TR><TD>SPECK-64(128)/CTR (128-bit key)<TD>856<TD>0.199
+<TR><TD>SPECK-128(128)/CTR (128-bit key)<TD>1011<TD>0.242
+<TR><TD>SPECK-128(192)/CTR (192-bit key)<TD>943<TD>0.239
+<TR><TD>SPECK-128(256)/CTR (256-bit key)<TD>932<TD>0.211
+<TBODY style="background: yellow;">
+<TR><TD>AES/GCM<TD>919<TD>0.472
+<TR><TD>AES/CCM (128-bit key)<TD>502<TD>0.300
+<TR><TD>AES/EAX (128-bit key)<TD>503<TD>0.403
+</TABLE>
+
+<BR>
+<TABLE>
+<COLGROUP><COL style="text-align: left;"><COL style="text-align: right;"><COL style="text-align: right;">
+<THEAD style="background: #F0F0F0">
+<TR><TH>Operation<TH>Milliseconds/Operation
+<TBODY style="background: white;">
+<TR><TD>RSA 1024 Encryption<TD>0.02
+<TR><TD>RSA 1024 Decryption<TD>0.31
+<TR><TD>LUC 1024 Encryption<TD>0.02
+<TR><TD>LUC 1024 Decryption<TD>0.51
+<TR><TD>DLIES 1024 Encryption<TD>0.21
+<TR><TD>DLIES 1024 Encryption with precomputation<TD>0.36
+<TR><TD>DLIES 1024 Decryption<TD>0.28
+<TR><TD>LUCELG 512 Encryption<TD>0.13
+<TR><TD>LUCELG 512 Encryption with precomputation<TD>0.12
+<TR><TD>LUCELG 512 Decryption<TD>0.14
+<TBODY style="background: yellow;">
+<TR><TD>RSA 2048 Encryption<TD>0.03
+<TR><TD>RSA 2048 Decryption<TD>1.44
+<TR><TD>LUC 2048 Encryption<TD>0.04
+<TR><TD>LUC 2048 Decryption<TD>2.47
+<TR><TD>DLIES 2048 Encryption<TD>1.04
+<TR><TD>DLIES 2048 Encryption with precomputation<TD>1.13
+<TR><TD>DLIES 2048 Decryption<TD>0.93
+<TR><TD>LUCELG 1024 Encryption<TD>0.46
+<TR><TD>LUCELG 1024 Encryption with precomputation<TD>0.46
+<TR><TD>LUCELG 1024 Decryption<TD>0.40
+<TBODY style="background: white;">
+<TR><TD>RSA 1024 Signature<TD>0.31
+<TR><TD>RSA 1024 Verification<TD>0.02
+<TR><TD>RW 1024 Signature<TD>0.33
+<TR><TD>RW 1024 Signature with precomputation<TD>0.33
+<TR><TD>RW 1024 Verification<TD>0.01
+<TR><TD>LUC 1024 Signature<TD>0.52
+<TR><TD>LUC 1024 Verification<TD>0.02
+<TR><TD>NR 1024 Signature<TD>0.11
+<TR><TD>NR 1024 Signature with precomputation<TD>0.11
+<TR><TD>NR 1024 Verification<TD>0.12
+<TR><TD>NR 1024 Verification with precomputation<TD>0.17
+<TR><TD>DSA 1024 Signature<TD>0.11
+<TR><TD>DSA 1024 Signature with precomputation<TD>0.11
+<TR><TD>DSA 1024 Verification<TD>0.13
+<TR><TD>DSA 1024 Verification with precomputation<TD>0.18
+<TR><TD>LUC-HMP 512 Signature<TD>0.12
+<TR><TD>LUC-HMP 512 Signature with precomputation<TD>0.12
+<TR><TD>LUC-HMP 512 Verification<TD>0.12
+<TR><TD>LUC-HMP 512 Verification with precomputation<TD>0.13
+<TR><TD>ESIGN 1023 Signature<TD>0.05
+<TR><TD>ESIGN 1023 Verification<TD>0.02
+<TR><TD>ESIGN 1536 Signature<TD>0.09
+<TR><TD>ESIGN 1536 Verification<TD>0.03
+<TBODY style="background: yellow;">
+<TR><TD>RSA 2048 Signature<TD>1.44
+<TR><TD>RSA 2048 Verification<TD>0.03
+<TR><TD>RW 2048 Signature<TD>1.48
+<TR><TD>RW 2048 Signature with precomputation<TD>1.47
+<TR><TD>RW 2048 Verification<TD>0.02
+<TR><TD>LUC 2048 Signature<TD>2.38
+<TR><TD>LUC 2048 Verification<TD>0.04
+<TR><TD>NR 2048 Signature<TD>0.50
+<TR><TD>NR 2048 Signature with precomputation<TD>0.24
+<TR><TD>NR 2048 Verification<TD>0.56
+<TR><TD>NR 2048 Verification with precomputation<TD>0.41
+<TR><TD>LUC-HMP 1024 Signature<TD>0.48
+<TR><TD>LUC-HMP 1024 Signature with precomputation<TD>0.46
+<TR><TD>LUC-HMP 1024 Verification<TD>0.46
+<TR><TD>LUC-HMP 1024 Verification with precomputation<TD>0.50
+<TR><TD>ESIGN 2046 Signature<TD>0.11
+<TR><TD>ESIGN 2046 Verification<TD>0.03
+<TBODY style="background: white;">
+<TR><TD>XTR-DH 171 Key-Pair Generation<TD>0.15
+<TR><TD>XTR-DH 171 Key Agreement<TD>0.31
+<TR><TD>XTR-DH 342 Key-Pair Generation<TD>0.41
+<TR><TD>XTR-DH 342 Key Agreement<TD>0.79
+<TR><TD>DH 1024 Key-Pair Generation<TD>0.11
+<TR><TD>DH 1024 Key-Pair Generation with precomputation<TD>0.19
+<TR><TD>DH 1024 Key Agreement<TD>0.29
+<TR><TD>DH 2048 Key-Pair Generation<TD>0.51
+<TR><TD>DH 2048 Key-Pair Generation with precomputation<TD>0.57
+<TR><TD>DH 2048 Key Agreement<TD>0.94
+<TR><TD>LUCDIF 512 Key-Pair Generation<TD>0.07
+<TR><TD>LUCDIF 512 Key-Pair Generation with precomputation<TD>0.07
+<TR><TD>LUCDIF 512 Key Agreement<TD>0.15
+<TR><TD>LUCDIF 1024 Key-Pair Generation<TD>0.24
+<TR><TD>LUCDIF 1024 Key-Pair Generation with precomputation<TD>0.25
+<TR><TD>LUCDIF 1024 Key Agreement<TD>0.40
+<TR><TD>MQV 1024 Key-Pair Generation<TD>0.12
+<TR><TD>MQV 1024 Key-Pair Generation with precomputation<TD>0.10
+<TR><TD>MQV 1024 Key Agreement<TD>0.21
+<TR><TD>MQV 2048 Key-Pair Generation<TD>0.50
+<TR><TD>MQV 2048 Key-Pair Generation with precomputation<TD>0.23
+<TR><TD>MQV 2048 Key Agreement<TD>0.93
+<TBODY style="background: yellow;">
+<TR><TD>ECIES over GF(p) 256 Encryption<TD>1.30
+<TR><TD>ECIES over GF(p) 256 Encryption with precomputation<TD>1.12
+<TR><TD>ECIES over GF(p) 256 Decryption<TD>0.88
+<TR><TD>ECDSA over GF(p) 256 Signature<TD>0.66
+<TR><TD>ECDSA over GF(p) 256 Signature with precomputation<TD>0.57
+<TR><TD>ECDSA over GF(p) 256 Verification<TD>2.54
+<TR><TD>ECDSA over GF(p) 256 Verification with precomputation<TD>0.98
+<TR><TD>ECDSA-RFC6979 over GF(p) 256 Signature<TD>0.67
+<TR><TD>ECDSA-RFC6979 over GF(p) 256 Signature with precomputation<TD>0.59
+<TR><TD>ECDSA-RFC6979 over GF(p) 256 Verification<TD>2.29
+<TR><TD>ECDSA-RFC6979 over GF(p) 256 Verification with precomputation<TD>0.95
+<TR><TD>ECGDSA over GF(p) 256 Signature<TD>1.30
+<TR><TD>ECGDSA over GF(p) 256 Signature with precomputation<TD>1.14
+<TR><TD>ECGDSA over GF(p) 256 Verification<TD>2.34
+<TR><TD>ECGDSA over GF(p) 256 Verification with precomputation<TD>0.94
+<TR><TD>ECDHC over GF(p) 256 Key-Pair Generation<TD>0.65
+<TR><TD>ECDHC over GF(p) 256 Key-Pair Generation with precomputation<TD>0.56
+<TR><TD>ECDHC over GF(p) 256 Key Agreement<TD>0.64
+<TR><TD>ECMQVC over GF(p) 256 Key-Pair Generation<TD>0.65
+<TR><TD>ECMQVC over GF(p) 256 Key-Pair Generation with precomputation<TD>0.56
+<TR><TD>ECMQVC over GF(p) 256 Key Agreement<TD>2.46
+<TBODY style="background: white;">
+<TR><TD>ECIES over GF(2^n) 233 Encryption<TD>7.06
+<TR><TD>ECIES over GF(2^n) 233 Encryption with precomputation<TD>1.96
+<TR><TD>ECIES over GF(2^n) 233 Decryption<TD>4.03
+<TR><TD>ECDSA over GF(2^n) 233 Signature<TD>3.55
+<TR><TD>ECDSA over GF(2^n) 233 Signature with precomputation<TD>1.00
+<TR><TD>ECDSA over GF(2^n) 233 Verification<TD>4.37
+<TR><TD>ECDSA over GF(2^n) 233 Verification with precomputation<TD>1.76
+<TR><TD>ECDSA-RFC6979 over GF(2^n) 233 Signature<TD>3.55
+<TR><TD>ECDSA-RFC6979 over GF(2^n) 233 Signature with precomputation<TD>1.07
+<TR><TD>ECDSA-RFC6979 over GF(2^n) 233 Verification<TD>4.43
+<TR><TD>ECDSA-RFC6979 over GF(2^n) 233 Verification with precomputation<TD>1.75
+<TR><TD>ECGDSA over GF(2^n) 233 Signature<TD>7.21
+<TR><TD>ECGDSA over GF(2^n) 233 Signature with precomputation<TD>1.99
+<TR><TD>ECGDSA over GF(2^n) 233 Verification<TD>4.37
+<TR><TD>ECGDSA over GF(2^n) 233 Verification with precomputation<TD>1.74
+<TR><TD>ECDHC over GF(2^n) 233 Key-Pair Generation<TD>3.52
+<TR><TD>ECDHC over GF(2^n) 233 Key-Pair Generation with precomputation<TD>1.01
+<TR><TD>ECDHC over GF(2^n) 233 Key Agreement<TD>3.61
+<TR><TD>ECMQVC over GF(2^n) 233 Key-Pair Generation<TD>3.56
+<TR><TD>ECMQVC over GF(2^n) 233 Key-Pair Generation with precomputation<TD>1.00
+<TR><TD>ECMQVC over GF(2^n) 233 Key Agreement<TD>4.48
+</TABLE>
+
+<P>Throughput Geometric Average: 910.529975
+
+<P>Test started at Wed Aug 22 12:45:10 2018
+<BR>Test ended at Wed Aug 22 13:00:33 2018
+
+</BODY>
+</HTML>

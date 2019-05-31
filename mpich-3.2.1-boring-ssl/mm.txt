@@ -1,0 +1,381 @@
+make  all-recursive
+make[1]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl'
+Making all in /home/mpiuser/mpich-3.2.1-boring-ssl/src/mpl
+make[2]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/mpl'
+  CC       src/mplstr.lo
+  CC       src/mpltrmem.lo
+  CC       src/mplmsg.lo
+  CC       src/mplenv.lo
+  CC       src/mplsock.lo
+  CCLD     libmpl.la
+make[2]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/mpl'
+Making all in /home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa
+make[2]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa'
+Making all in src
+make[3]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa/src'
+make  all-am
+make[4]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa/src'
+  CC       opa_primitives.lo
+  CC       opa_queue.lo
+  CCLD     libopa.la
+make[4]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa/src'
+make[3]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa/src'
+Making all in test
+make[3]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa/test'
+make[3]: Nothing to be done for 'all'.
+make[3]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa/test'
+make[3]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa'
+make[3]: Nothing to be done for 'all-am'.
+make[3]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa'
+make[2]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/openpa'
+Making all in src/mpi/romio
+make[2]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/mpi/romio'
+make[3]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/mpi/romio'
+  CC       mpi-io/close.lo
+  CC       mpi-io/delete.lo
+  CC       mpi-io/fsync.lo
+  CC       mpi-io/file_c2f.lo
+  CC       mpi-io/get_atom.lo
+  CC       mpi-io/file_f2c.lo
+  CC       mpi-io/get_amode.lo
+  CC       mpi-io/get_bytoff.lo
+  CC       mpi-io/get_extent.lo
+  CC       mpi-io/get_group.lo
+  CC       mpi-io/get_info.lo
+  CC       mpi-io/get_posn.lo
+  CC       mpi-io/get_posn_sh.lo
+  CC       mpi-io/get_size.lo
+  CC       mpi-io/get_view.lo
+  CC       mpi-io/iread.lo
+  CC       mpi-io/iread_all.lo
+  CC       mpi-io/iread_at.lo
+  CC       mpi-io/iread_atall.lo
+  CC       mpi-io/iread_sh.lo
+  CC       mpi-io/iwrite.lo
+  CC       mpi-io/iwrite_all.lo
+  CC       mpi-io/iwrite_at.lo
+  CC       mpi-io/iwrite_atall.lo
+  CC       mpi-io/iwrite_sh.lo
+  CC       mpi-io/open.lo
+  CC       mpi-io/prealloc.lo
+  CC       mpi-io/rd_atallb.lo
+  CC       mpi-io/rd_atalle.lo
+  CC       mpi-io/read.lo
+  CC       mpi-io/read_all.lo
+  CC       mpi-io/read_allb.lo
+  CC       mpi-io/read_alle.lo
+  CC       mpi-io/read_at.lo
+  CC       mpi-io/read_atall.lo
+  CC       mpi-io/read_ord.lo
+  CC       mpi-io/read_ordb.lo
+  CC       mpi-io/read_orde.lo
+  CC       mpi-io/register_datarep.lo
+  CC       mpi-io/read_sh.lo
+  CC       mpi-io/seek.lo
+  CC       mpi-io/seek_sh.lo
+  CC       mpi-io/set_atom.lo
+  CC       mpi-io/set_info.lo
+  CC       mpi-io/set_size.lo
+  CC       mpi-io/set_view.lo
+  CC       mpi-io/wr_atallb.lo
+  CC       mpi-io/wr_atalle.lo
+  CC       mpi-io/write.lo
+  CC       mpi-io/write_all.lo
+  CC       mpi-io/write_allb.lo
+  CC       mpi-io/write_alle.lo
+  CC       mpi-io/write_at.lo
+  CC       mpi-io/write_atall.lo
+  CC       mpi-io/write_ord.lo
+  CC       mpi-io/write_ordb.lo
+  CC       mpi-io/write_orde.lo
+  CC       mpi-io/write_sh.lo
+  CC       mpi-io/glue/mpich/mpio_file.lo
+  CC       mpi-io/glue/mpich/mpio_err.lo
+  CC       mpi-io/mpich_fileutil.lo
+  CC       mpi-io/mpir-mpioinit.lo
+  CC       mpi-io/mpiu_greq.lo
+  CC       mpi-io/mpiu_external32.lo
+  CC       adio/ad_nfs/ad_nfs_read.lo
+  CC       adio/ad_nfs/ad_nfs_open.lo
+  CC       adio/ad_nfs/ad_nfs_write.lo
+  CC       adio/ad_nfs/ad_nfs_done.lo
+  CC       adio/ad_nfs/ad_nfs_fcntl.lo
+  CC       adio/ad_nfs/ad_nfs_iread.lo
+  CC       adio/ad_nfs/ad_nfs_iwrite.lo
+  CC       adio/ad_nfs/ad_nfs_wait.lo
+  CC       adio/ad_nfs/ad_nfs_setsh.lo
+  CC       adio/ad_nfs/ad_nfs_getsh.lo
+  CC       adio/ad_nfs/ad_nfs.lo
+  CC       adio/ad_nfs/ad_nfs_resize.lo
+  CC       adio/ad_nfs/ad_nfs_features.lo
+  CC       adio/ad_testfs/ad_testfs_close.lo
+  CC       adio/ad_testfs/ad_testfs_read.lo
+  CC       adio/ad_testfs/ad_testfs_rdcoll.lo
+  CC       adio/ad_testfs/ad_testfs_wrcoll.lo
+  CC       adio/ad_testfs/ad_testfs_open.lo
+  CC       adio/ad_testfs/ad_testfs_write.lo
+  CC       adio/ad_testfs/ad_testfs_done.lo
+  CC       adio/ad_testfs/ad_testfs_fcntl.lo
+  CC       adio/ad_testfs/ad_testfs_iread.lo
+  CC       adio/ad_testfs/ad_testfs_iwrite.lo
+  CC       adio/ad_testfs/ad_testfs_wait.lo
+  CC       adio/ad_testfs/ad_testfs_flush.lo
+  CC       adio/ad_testfs/ad_testfs_seek.lo
+  CC       adio/ad_testfs/ad_testfs_resize.lo
+  CC       adio/ad_testfs/ad_testfs_hints.lo
+  CC       adio/ad_testfs/ad_testfs_delete.lo
+  CC       adio/ad_testfs/ad_testfs.lo
+  CC       adio/ad_ufs/ad_ufs.lo
+  CC       adio/ad_ufs/ad_ufs_open.lo
+  CC       adio/common/ad_aggregate.lo
+  CC       adio/common/ad_aggregate_new.lo
+  CC       adio/common/ad_close.lo
+  CC       adio/common/ad_coll_build_req_new.lo
+  CC       adio/common/ad_coll_exch_new.lo
+  CC       adio/common/ad_darray.lo
+  CC       adio/common/ad_delete.lo
+  CC       adio/common/ad_done.lo
+  CC       adio/common/ad_done_fake.lo
+  CC       adio/common/ad_end.lo
+  CC       adio/common/ad_fcntl.lo
+  CC       adio/common/ad_features.lo
+  CC       adio/common/ad_flush.lo
+  CC       adio/common/ad_fstype.lo
+  CC       adio/common/ad_get_sh_fp.lo
+  CC       adio/common/ad_hints.lo
+  CC       adio/common/ad_init.lo
+  CC       adio/common/ad_io_coll.lo
+  CC       adio/common/ad_iopen.lo
+  CC       adio/common/ad_iread.lo
+  CC       adio/common/ad_iread_coll.lo
+  CC       adio/common/ad_iread_fake.lo
+  CC       adio/common/ad_iwrite.lo
+  CC       adio/common/ad_iwrite_coll.lo
+  CC       adio/common/ad_iwrite_fake.lo
+  CC       adio/common/ad_open.lo
+  CC       adio/common/ad_opencoll.lo
+  CC       adio/common/ad_opencoll_failsafe.lo
+  CC       adio/common/ad_opencoll_scalable.lo
+  CC       adio/common/ad_prealloc.lo
+  CC       adio/common/ad_read.lo
+  CC       adio/common/ad_read_coll.lo
+  CC       adio/common/ad_read_str.lo
+  CC       adio/common/ad_read_str_naive.lo
+  CC       adio/common/ad_resize.lo
+  CC       adio/common/ad_seek.lo
+  CC       adio/common/ad_set_sh_fp.lo
+  CC       adio/common/ad_set_view.lo
+  CC       adio/common/ad_subarray.lo
+  CC       adio/common/ad_wait.lo
+  CC       adio/common/ad_wait_fake.lo
+  CC       adio/common/ad_write.lo
+  CC       adio/common/ad_write_coll.lo
+  CC       adio/common/ad_write_nolock.lo
+  CC       adio/common/ad_write_str.lo
+  CC       adio/common/ad_write_str_naive.lo
+  CC       adio/common/adi_close.lo
+  CC       adio/common/byte_offset.lo
+  CC       adio/common/cb_config_list.lo
+  CC       adio/common/eof_offset.lo
+  CC       adio/common/error.lo
+  CC       adio/common/flatten.lo
+  CC       adio/common/get_fp_posn.lo
+  CC       adio/common/greq_fns.lo
+  CC       adio/common/heap-sort.lo
+  CC       adio/common/iscontig.lo
+  CC       adio/common/lock.lo
+  CC       adio/common/malloc.lo
+  CC       adio/common/shfp_fname.lo
+  CC       adio/common/status_setb.lo
+  CC       adio/common/strfns.lo
+  CC       adio/common/system_hints.lo
+  CC       adio/common/hint_fns.lo
+  CC       adio/common/ad_threaded_io.lo
+  CC       adio/common/p2p_aggregation.lo
+  CC       adio/common/onesided_aggregation.lo
+  CC       adio/common/utils.lo
+  CCLD     libromio.la
+make[3]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/mpi/romio'
+make[2]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/mpi/romio'
+Making all in src/pm/hydra
+make[2]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra'
+Making all in mpl
+make[3]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/mpl'
+  CC       src/mplstr.lo
+  CC       src/mpltrmem.lo
+  CC       src/mplenv.lo
+  CC       src/mplmsg.lo
+  CC       src/mplsock.lo
+  CCLD     libmpl.la
+make[3]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/mpl'
+Making all in tools/topo/hwloc/hwloc
+make[3]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc'
+Making all in src
+make[4]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc/src'
+  CC       topology.lo
+  CC       traversal.lo
+  CC       distances.lo
+  CC       components.lo
+  CC       bind.lo
+  CC       bitmap.lo
+  CC       pci-common.lo
+  CC       diff.lo
+  CC       misc.lo
+  CC       base64.lo
+  CC       topology-noos.lo
+  CC       topology-synthetic.lo
+  CC       topology-custom.lo
+  CC       topology-xml.lo
+  CC       topology-xml-nolibxml.lo
+  CC       topology-linux.lo
+  CC       topology-x86.lo
+  CCLD     libhwloc_embedded.la
+make[4]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc/src'
+Making all in include
+make[4]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc/include'
+make[4]: Nothing to be done for 'all'.
+make[4]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc/include'
+make[4]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc'
+make[4]: Nothing to be done for 'all-am'.
+make[4]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc'
+make[3]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra/tools/topo/hwloc/hwloc'
+Making all in .
+make[3]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra'
+  CC       utils/alloc/alloc.lo
+  CC       utils/args/args.lo
+  CC       utils/dbg/dbg.lo
+  CC       utils/env/env.lo
+  CC       utils/launch/launch.lo
+  CC       utils/others/others.lo
+  CC       utils/signals/signals.lo
+  CC       utils/sock/sock.lo
+  CC       utils/string/string.lo
+  CC       tools/topo/topo.lo
+  CC       tools/topo/hwloc/topo_hwloc.lo
+  CC       tools/bootstrap/src/bsci_init.lo
+  CC       tools/bootstrap/src/bsci_finalize.lo
+  CC       tools/bootstrap/src/bsci_launch.lo
+  CC       tools/bootstrap/src/bsci_query_node_list.lo
+  CC       tools/bootstrap/src/bsci_query_proxy_id.lo
+  CC       tools/bootstrap/src/bsci_query_native_int.lo
+  CC       tools/bootstrap/src/bsci_wait.lo
+  CC       tools/bootstrap/src/bsci_env.lo
+  CC       tools/bootstrap/utils/bscu_wait.lo
+  CC       tools/bootstrap/utils/bscu_cb.lo
+  CC       tools/bootstrap/external/external_common.lo
+  CC       tools/bootstrap/external/external_common_launch.lo
+  CC       tools/bootstrap/external/fork_init.lo
+  CC       tools/bootstrap/external/user_init.lo
+  CC       tools/bootstrap/external/manual_init.lo
+  CC       tools/bootstrap/external/rsh_env.lo
+  CC       tools/bootstrap/external/rsh_init.lo
+  CC       tools/bootstrap/external/ssh_init.lo
+  CC       tools/bootstrap/external/ssh.lo
+  CC       tools/bootstrap/external/ssh_env.lo
+  CC       tools/bootstrap/external/ssh_finalize.lo
+  CC       tools/bootstrap/external/slurm_init.lo
+  CC       tools/bootstrap/external/slurm_launch.lo
+  CC       tools/bootstrap/external/slurm_env.lo
+  CC       tools/bootstrap/external/slurm_query_native_int.lo
+  CC       tools/bootstrap/external/slurm_query_node_list.lo
+  CC       tools/bootstrap/external/slurm_query_proxy_id.lo
+  CC       tools/bootstrap/external/ll_init.lo
+  CC       tools/bootstrap/external/ll_launch.lo
+  CC       tools/bootstrap/external/ll_query_native_int.lo
+  CC       tools/bootstrap/external/ll_query_node_list.lo
+  CC       tools/bootstrap/external/ll_query_proxy_id.lo
+  CC       tools/bootstrap/external/ll_env.lo
+  CC       tools/bootstrap/external/lsf_init.lo
+  CC       tools/bootstrap/external/lsf_query_native_int.lo
+  CC       tools/bootstrap/external/lsf_query_node_list.lo
+  CC       tools/bootstrap/external/lsf_env.lo
+  CC       tools/bootstrap/external/sge_init.lo
+  CC       tools/bootstrap/external/sge_query_native_int.lo
+  CC       tools/bootstrap/external/sge_query_node_list.lo
+  CC       tools/bootstrap/external/sge_env.lo
+  CC       tools/bootstrap/external/pbs_init.lo
+  CC       tools/bootstrap/external/pbs_query_native_int.lo
+  CC       tools/bootstrap/external/pbs_query_node_list.lo
+  CC       tools/bootstrap/external/cobalt_init.lo
+  CC       tools/bootstrap/external/cobalt_query_native_int.lo
+  CC       tools/bootstrap/external/cobalt_query_node_list.lo
+  CC       tools/bootstrap/persist/persist_init.lo
+  CC       tools/bootstrap/persist/persist_launch.lo
+  CC       tools/bootstrap/persist/persist_wait.lo
+  CC       tools/ckpoint/ckpoint.lo
+  CC       tools/ckpoint/blcr/ckpoint_blcr.lo
+  CC       tools/demux/demux.lo
+  CC       tools/demux/demux_poll.lo
+  CC       tools/demux/demux_select.lo
+  CC       tools/debugger/debugger.lo
+  CC       ui/utils/uiu.lo
+  CC       pm/pmiserv/pmiserv_pmi.lo
+  CC       pm/pmiserv/pmiserv_pmi_v1.lo
+  CC       pm/pmiserv/pmiserv_pmi_v2.lo
+  CC       pm/pmiserv/pmiserv_pmci.lo
+  CC       pm/pmiserv/pmiserv_cb.lo
+  CC       pm/pmiserv/pmiserv_utils.lo
+  CC       pm/pmiserv/common.lo
+  CC       pm/pmiserv/pmi_v2_common.lo
+  CC       tools/bootstrap/persist/hydra_persist-persist_server.o
+  CC       tools/nameserver/hydra_nameserver-hydra_nameserver.o
+  CC       pm/pmiserv/hydra_pmi_proxy-pmip.o
+  CC       pm/pmiserv/hydra_pmi_proxy-pmip_cb.o
+  CC       pm/pmiserv/hydra_pmi_proxy-pmip_utils.o
+  CC       pm/pmiserv/hydra_pmi_proxy-pmip_pmi_v1.o
+  CC       pm/pmiserv/hydra_pmi_proxy-pmip_pmi_v2.o
+  CC       pm/pmiserv/hydra_pmi_proxy-common.o
+  CC       pm/pmiserv/hydra_pmi_proxy-pmi_v2_common.o
+  CC       ui/mpich/mpiexec.o
+  CC       ui/mpich/utils.o
+  CCLD     libhydra.la
+  CCLD     hydra_persist
+  CCLD     hydra_nameserver
+  CCLD     hydra_pmi_proxy
+  CCLD     libpm.la
+  CCLD     mpiexec.hydra
+make[3]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra'
+make[2]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl/src/pm/hydra'
+Making all in .
+make[2]: Entering directory '/home/mpiuser/mpich-3.2.1-boring-ssl'
+(CDPATH="${ZSH_VERSION+.}:" && cd . && /bin/bash /home/mpiuser/mpich-3.2.1-boring-ssl/confdb/missing autoheader)
+  CC       src/glue/romio/lib_libmpi_la-all_romio_symbols.lo
+  CC       src/mutex/lib_libmpi_la-mutex_create.lo
+  CC       src/mutex/lib_libmpi_la-mutex_free.lo
+  CC       src/mutex/lib_libmpi_la-mutex_lock.lo
+  CC       src/mutex/lib_libmpi_la-mutex_unlock.lo
+  CC       src/mpi/init/lib_libmpi_la-initinfo.lo
+  F77      src/binding/fortran/mpif_h/setbotf.lo
+rm -f src/binding/fortran/use_mpi/mpifnoext.h
+sed -e 's/^C/\!/g' -e '/EXTERNAL/d' \
+-e '/REAL\*8/d' \
+-e '/DOUBLE PRECISION/d' \
+-e '/MPI_WTICK/d' src/binding/fortran/mpif_h/mpif.h > src/binding/fortran/use_mpi/mpifnoext.h
+  CC       src/env/mpivars.o
+cp -p src/env/mpicc.bash src/env/mpicc
+cp -p src/env/mpifort.bash src/env/mpifort
+cp -p src/env/mpicxx.bash src/env/mpicxx
+  MOD      src/binding/fortran/use_mpi/mpi_sizeofs.mod-stamp
+  MOD      src/binding/fortran/use_mpi/mpi_constants.mod-stamp
+rm -f src/include/stamp-h1
+touch src/include/mpichconf.h.in
+cd . && /bin/bash ./config.status src/include/mpichconf.h
+  MOD      src/binding/fortran/use_mpi/mpi_base.mod-stamp
+config.status: creating src/include/mpichconf.h
+config.status: src/include/mpichconf.h is unchanged
+  CC       src/mpi/attr/lib_libmpi_la-attr_delete.lo
+  CC       src/mpi/attr/lib_libmpi_la-attr_get.lo
+  CC       src/mpi/attr/lib_libmpi_la-attr_put.lo
+  CC       src/mpi/attr/lib_libmpi_la-comm_create_keyval.lo
+  CC       src/mpi/attr/lib_libmpi_la-comm_delete_attr.lo
+  CC       src/mpi/attr/lib_libmpi_la-comm_free_keyval.lo
+Makefile:25844: recipe for target 'src/mpi/attr/lib_libmpi_la-comm_delete_attr.lo' failed
+Makefile:25823: recipe for target 'src/mpi/attr/lib_libmpi_la-attr_get.lo' failed
+Makefile:25816: recipe for target 'src/mpi/attr/lib_libmpi_la-attr_delete.lo' failed
+Makefile:25851: recipe for target 'src/mpi/attr/lib_libmpi_la-comm_free_keyval.lo' failed
+Makefile:25837: recipe for target 'src/mpi/attr/lib_libmpi_la-comm_create_keyval.lo' failed
+Makefile:25830: recipe for target 'src/mpi/attr/lib_libmpi_la-attr_put.lo' failed
+make[2]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl'
+Makefile:38608: recipe for target 'all-recursive' failed
+make[1]: Leaving directory '/home/mpiuser/mpich-3.2.1-boring-ssl'
+Makefile:10337: recipe for target 'all' failed
